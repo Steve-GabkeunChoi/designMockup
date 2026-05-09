@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Algolms 운영자 콘솔 목업</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-icon">A</div>
+        <div class="brand-text">
+          <strong>대시보드</strong>
+          <span>운영자 콘솔</span>
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <button class="nav-item active" data-page="dashboard">
+          <span class="nav-icon">⌂</span>
+          <span>대시보드</span>
+        </button>
+
+        <button class="nav-item" data-page="work">
+          <span class="nav-icon">▣</span>
+          <span>내 업무</span>
+          <em>12</em>
+        </button>
+
+        <button class="nav-item" data-page="schedule">
+          <span class="nav-icon">▦</span>
+          <span>일정</span>
+        </button>
+
+        <button class="nav-item" data-page="courses">
+          <span class="nav-icon">▤</span>
+          <span>과정 관리</span>
+        </button>
+
+        <button class="nav-item" data-page="clients">
+          <span class="nav-icon">▧</span>
+          <span>고객사 관리</span>
+        </button>
+
+        <button class="nav-item" data-page="instructors">
+          <span class="nav-icon">◇</span>
+          <span>강사 관리</span>
+        </button>
+
+        <button class="nav-item" data-page="insight">
+          <span class="nav-icon">⌁</span>
+          <span>AI 인사이트</span>
+        </button>
+
+        <button class="nav-item" data-page="reports">
+          <span class="nav-icon">▥</span>
+          <span>보고서</span>
+        </button>
+
+        <button class="nav-item" data-page="settings">
+          <span class="nav-icon">⚙</span>
+          <span>설정</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <button class="support-link">지원 센터</button>
+        <button class="support-link">공지사항</button>
+
+        <div class="user-card">
+          <div class="user-avatar">SJ</div>
+          <div>
+            <strong>이상진</strong>
+            <span>운영자</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="search-box">
+          <span class="search-icon">⌕</span>
+          <input type="text" placeholder="과정 ID, 강사, 고객사, 과정명 검색..." />
+          <span class="shortcut">⌘ K</span>
+        </div>
+
+        <div class="topbar-actions">
+          <span class="agent-badge">AI Agent · 가동 중</span>
+          <button class="round-btn">●</button>
+          <button class="round-btn">?</button>
+          <button class="profile-btn">
+            <span class="profile-avatar">SJ</span>
+            <span>이상진</span>
+          </button>
+        </div>
+      </header>
+
+      <section id="dashboardPage" class="page-section active">
+        <div class="dashboard">
+          <div class="dashboard-header">
+            <div>
+              <h1>대시보드</h1>
+              <p>오늘의 운영 현황과 핵심 지표를 한눈에 확인하세요.</p>
+            </div>
+
+            <div class="dashboard-actions">
+              <span>마지막 동기화 09:42</span>
+              <button class="outline-btn">필터</button>
+              <button class="primary-btn">새 등록</button>
+            </div>
+          </div>
+
+          <div class="dashboard-layout">
+            <section class="dashboard-left">
+              <article class="brief-card">
+                <div>
+                  <strong>AI AGENT · 오늘 브리핑</strong>
+                  <p>
+                    3건의 검토 요청이 있습니다 · 신규 의뢰 1건 · 진행 중 8 · 충돌 1건 · 확정 지연 1건 · 강사 추천 3건
+                  </p>
+                </div>
+                <span>생성 09:38</span>
+              </article>
+
+              <div class="metric-grid">
+                <article class="metric-card">
+                  <span>오늘 진행 강의</span>
+                  <strong>5</strong>
+                  <p>4 확정 · 1 진행 중</p>
+                </article>
+
+                <article class="metric-card">
+                  <span>이번 주 수주</span>
+                  <strong>188h</strong>
+                  <p class="positive">전주 대비 +12%</p>
+                </article>
+
+                <article class="metric-card">
+                  <span>미배정 항목</span>
+                  <strong>8</strong>
+                  <p class="warning">RAG D-3</p>
+                </article>
+
+                <article class="metric-card">
+                  <span>정산 대기</span>
+                  <strong>₩48.2M</strong>
+                  <p>12건 · 5월 마감</p>
+                </article>
+
+                <article class="metric-card">
+                  <span>고객 만족도</span>
+                  <strong>4.62</strong>
+                  <p class="positive">최근 30일</p>
+                </article>
+              </div>
+
+              <article class="table-card">
+                <div class="table-header">
+                  <div>
+                    <h2>진행 중인 교육 프로젝트</h2>
+                    <span>12건</span>
+                  </div>
+
+                  <div class="tabs">
+                    <button class="tab active" data-filter="all">전체</button>
+                    <button class="tab" data-filter="request">의뢰</button>
+                    <button class="tab" data-filter="proposal">제안 중</button>
+                    <button class="tab" data-filter="confirmed">확정</button>
+                    <button class="tab" data-filter="progress">진행</button>
+                  </div>
+                </div>
+
+                <div class="table-wrap">
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>과정 ID</th>
+                        <th>고객사</th>
+                        <th>과정명</th>
+                        <th>일정</th>
+                        <th>강사</th>
+                        <th>시간</th>
+                        <th>상태</th>
+                        <th>등급</th>
+                        <th>코멘트</th>
+                      </tr>
+                    </thead>
+                    <tbody id="projectTableBody"></tbody>
+                  </table>
+                </div>
+
+                <div class="table-footer">
+                  <button id="loadMoreBtn">더보기</button>
+                </div>
+              </article>
+            </section>
+
+            <aside class="dashboard-right">
+              <article class="side-card">
+                <div class="side-title">
+                  <h2>알림</h2>
+                  <span>5</span>
+                </div>
+
+                <div id="alertList" class="alert-list"></div>
+              </article>
+
+              <article class="side-card">
+                <div class="side-title">
+                  <h2>AI 추천 아이템</h2>
+                </div>
+
+                <div class="recommend-box">
+                  <strong>추천 제안 5건</strong>
+
+                  <ul>
+                    <li>한화시스템 파이썬 견적 최신</li>
+                    <li>이서영 5/16 충돌, 온지은 대체 제안</li>
+                    <li>ML Ops 부트캠프 강사 3명 추천 완료</li>
+                    <li>5월 세금계산서 4건 발행</li>
+                    <li>ACE 5사 수료증 만족도 요약 확인</li>
+                  </ul>
+                </div>
+              </article>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="schedulePage" class="page-section">
+        <div class="schedule-page">
+          <div class="schedule-header">
+            <div>
+              <h1>일정 — 2026년 5월</h1>
+            </div>
+
+            <div class="schedule-view-tabs">
+              <button class="view-tab active">월</button>
+              <button class="view-tab">주</button>
+              <button class="view-tab">일</button>
+              <button class="view-tab">리스트</button>
+            </div>
+
+            <button class="primary-btn">+ 일정 등록</button>
+          </div>
+
+          <div class="schedule-toolbar">
+            <button class="schedule-chip active">전체 <span>84</span></button>
+            <button class="schedule-chip chip-purple">의뢰 <span>8</span></button>
+            <button class="schedule-chip chip-orange">제안중 <span>6</span></button>
+            <button class="schedule-chip chip-green">확정 <span>52</span></button>
+            <button class="schedule-chip chip-blue">진행 <span>4</span></button>
+            <button class="schedule-chip">완료 <span>14</span></button>
+
+            <div class="schedule-selects">
+              <button class="select-btn">담당자: 이상진</button>
+              <button class="select-btn">고객사: 전체</button>
+            </div>
+          </div>
+
+          <div class="calendar-card">
+            <div class="calendar-grid calendar-weekdays">
+              <div>MON</div>
+              <div>TUE</div>
+              <div>WED</div>
+              <div>THU</div>
+              <div>FRI</div>
+              <div>SAT</div>
+              <div class="sunday">SUN</div>
+            </div>
+
+            <div id="calendarGrid" class="calendar-grid calendar-days"></div>
+          </div>
+
+          <button class="floating-calendar-btn">▦</button>
+        </div>
+      </section>
+
+      <section id="emptyPage" class="page-section">
+        <div class="empty-page">
+          <h1 id="emptyTitle">준비 중인 화면</h1>
+          <p>현재 목업에서는 대시보드와 일정 화면을 우선 연결했습니다.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
